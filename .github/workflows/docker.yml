@@ -30,9 +30,5 @@ jobs:
             type=gha,scope=main
             type=gha,scope=${{ github.ref_name }}
           tags: |
-            cowboygneox/playdate-ci:${{ github.ref_name }}
-            cowboygneox/playdate-ci:latest
-
-      - name: Run the build process with Docker
-        run: |
-          docker run --rm cowboygneox/playdate-ci:latest
+            cowboygneox/playdate-tests:${{ github.ref_name }}
+            cowboygneox/playdate-tests:latest
