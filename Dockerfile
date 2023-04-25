@@ -22,6 +22,6 @@ COPY framework/luaunit/luaunit.lua luaunit/
 COPY framework/luaunit/playdate_luaunit_fix.lua luaunit/
 COPY ["Playdate Simulator.ini", "/root/.Playdate Simulator/"]
 
-WORKDIR /tests
+WORKDIR /runner
 
 ENTRYPOINT [ "/playdate/docker-entrypoint.sh" ]
