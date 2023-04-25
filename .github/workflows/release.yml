@@ -24,11 +24,8 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          cache-to: |
-            type=gha,mode=max,scope=${{ github.ref_name }}
           cache-from: |
             type=gha,scope=main
-            type=gha,scope=${{ github.ref_name }}
           tags: |
             cowboygneox/playdate-tests:${{ github.ref_name }}
             cowboygneox/playdate-tests:latest
